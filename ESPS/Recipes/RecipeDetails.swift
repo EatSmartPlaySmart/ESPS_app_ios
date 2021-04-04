@@ -19,14 +19,11 @@ struct RecipeDetails: View {
             ScrollView {
                 VStack {
                     
-                    
-                    Text(recipe.title)
-        //            HStack {
-        //                    .padding(.horizontal)
-        //                Spacer()
-        //            }
-                    
                     Image(recipe.imageName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width, height: 200)
+                        .clipped()
 
                     HStack {
 
@@ -52,6 +49,8 @@ struct RecipeDetails: View {
 
                     HStack {
                         Text("Ingredients")
+                            .font(.title2)
+                            .fontWeight(.bold)
                             .padding([.top, .leading, .trailing])
                         Spacer()
                     }
@@ -64,8 +63,13 @@ struct RecipeDetails: View {
                                     CheckboxField(id: recipe.id.uuidString, label: ingredient.item)
                                         .padding(.leading)
                                     Spacer()
+                                }
+                                HStack {
                                     Text(ingredient.qty)
-                                        .padding(.trailing)
+                                        .font(.caption)
+                                        .padding(.leading, 32)
+                                        .padding(.bottom)
+                                    Spacer()
                                 }
                                 Divider()
                             }
@@ -74,7 +78,9 @@ struct RecipeDetails: View {
 
                     HStack {
                         Text("Method")
-                            .padding(.horizontal)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .padding([.top, .leading, .trailing])
 
                         Spacer()
                     }
@@ -82,7 +88,7 @@ struct RecipeDetails: View {
                     
                     HStack {
                         Text(recipe.method)
-                            .padding(.horizontal)
+                            .padding()
                         Spacer()
                     }
 
@@ -90,6 +96,7 @@ struct RecipeDetails: View {
                     Spacer()
                 }
             }
+            .navigationBarTitle(recipe.title)
         }
     }
 }

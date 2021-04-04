@@ -14,7 +14,6 @@
 		980E132325C3E54C009F8489 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E132225C3E54C009F8489 /* HomeView.swift */; };
 		980E132625C3E6CA009F8489 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E132525C3E6CA009F8489 /* RecipesView.swift */; };
 		980E132925C3FD26009F8489 /* HomeFeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E132825C3FD26009F8489 /* HomeFeedData.swift */; };
-		9815A7E725C7B82200A66C58 /* PAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815A7E625C7B82200A66C58 /* PAView.swift */; };
 		9815A7EA25C7BB5F00A66C58 /* FeedDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815A7E925C7BB5F00A66C58 /* FeedDetails.swift */; };
 		9815A7F025C8AFC700A66C58 /* RecipesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815A7EF25C8AFC700A66C58 /* RecipesData.swift */; };
 		9815A7F325C8AFD200A66C58 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815A7F225C8AFD200A66C58 /* RecipeDetails.swift */; };
@@ -23,6 +22,7 @@
 		9861C25525CA08CF0056772B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861C25425CA08CF0056772B /* SearchBar.swift */; };
 		9861C25825CA0E060056772B /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861C25725CA0E060056772B /* ViewControllerResolver.swift */; };
 		9861C25B25CA23A10056772B /* CheckBoxField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861C25A25CA23A10056772B /* CheckBoxField.swift */; };
+		9871C39E26004B3E00A63B8D /* PolicyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9871C39D26004B3E00A63B8D /* PolicyData.swift */; };
 		9896D08625D08B7C008C1BC6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9896D08525D08B7C008C1BC6 /* Colors.xcassets */; };
 		9897AAC825CB59EE00BC82A4 /* Varela-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9897AAC725CB59ED00BC82A4 /* Varela-Regular.ttf */; };
 		9897AAD425CB800100BC82A4 /* GeneralInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897AAD325CB800100BC82A4 /* GeneralInfoView.swift */; };
@@ -45,7 +45,6 @@
 		980E132225C3E54C009F8489 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		980E132525C3E6CA009F8489 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		980E132825C3FD26009F8489 /* HomeFeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedData.swift; sourceTree = "<group>"; };
-		9815A7E625C7B82200A66C58 /* PAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAView.swift; sourceTree = "<group>"; };
 		9815A7E925C7BB5F00A66C58 /* FeedDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetails.swift; sourceTree = "<group>"; };
 		9815A7EF25C8AFC700A66C58 /* RecipesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesData.swift; sourceTree = "<group>"; };
 		9815A7F225C8AFD200A66C58 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		9861C25425CA08CF0056772B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		9861C25725CA0E060056772B /* ViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
 		9861C25A25CA23A10056772B /* CheckBoxField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxField.swift; sourceTree = "<group>"; };
+		9871C39D26004B3E00A63B8D /* PolicyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyData.swift; sourceTree = "<group>"; };
 		9896D08525D08B7C008C1BC6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9897AAC725CB59ED00BC82A4 /* Varela-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Varela-Regular.ttf"; sourceTree = "<group>"; };
 		9897AAD325CB800100BC82A4 /* GeneralInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoView.swift; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 				9897AACB25CB79E800BC82A4 /* Policies */,
 				9897AACA25CB79DE00BC82A4 /* Menu Planning */,
 				9897AAC725CB59ED00BC82A4 /* Varela-Regular.ttf */,
-				9861C25325CA06840056772B /* PA */,
 				9815A7EE25C8AFA500A66C58 /* Recipes */,
 				9815A7EC25C8AA2300A66C58 /* Home */,
 				980E131225C3A7C8009F8489 /* ESPSApp.swift */,
@@ -147,14 +146,6 @@
 			path = Recipes;
 			sourceTree = "<group>";
 		};
-		9861C25325CA06840056772B /* PA */ = {
-			isa = PBXGroup;
-			children = (
-				9815A7E625C7B82200A66C58 /* PAView.swift */,
-			);
-			path = PA;
-			sourceTree = "<group>";
-		};
 		9897AACA25CB79DE00BC82A4 /* Menu Planning */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +159,7 @@
 			children = (
 				9897AAD925CB802D00BC82A4 /* PoliciesView.swift */,
 				98CFC63F25DB7AAE0081F0D0 /* EmailHelper.swift */,
+				9871C39D26004B3E00A63B8D /* PolicyData.swift */,
 			);
 			path = Policies;
 			sourceTree = "<group>";
@@ -270,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9871C39E26004B3E00A63B8D /* PolicyData.swift in Sources */,
 				9897AAE125CB807300BC82A4 /* ActivitiesView.swift in Sources */,
 				9897AADA25CB802D00BC82A4 /* PoliciesView.swift in Sources */,
 				9897AAD425CB800100BC82A4 /* GeneralInfoView.swift in Sources */,
@@ -278,7 +271,6 @@
 				984DCAFD25DF797F0059531D /* Website.swift in Sources */,
 				9897AAD725CB801E00BC82A4 /* UsefulWebsiteView.swift in Sources */,
 				9815A7F025C8AFC700A66C58 /* RecipesData.swift in Sources */,
-				9815A7E725C7B82200A66C58 /* PAView.swift in Sources */,
 				980E131525C3A7C8009F8489 /* ContentView.swift in Sources */,
 				980E132625C3E6CA009F8489 /* RecipesView.swift in Sources */,
 				9897AADD25CB803800BC82A4 /* MenuPlanningView.swift in Sources */,

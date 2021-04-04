@@ -13,6 +13,10 @@ struct RecipesView: View {
     @ObservedObject var searchBar: SearchBar = SearchBar()
     
     var body: some View {
+        
+        ZStack {
+            Color("bg")
+                .edgesIgnoringSafeArea(.all)
             List{
                 ForEach(
                  recipeList.filter {
@@ -25,8 +29,10 @@ struct RecipesView: View {
                     }
                 }
             }
-            .navigationBarTitle("Recipes")
-            .add(self.searchBar)
+                
+        }
+        .navigationBarTitle("Recipes")
+        .add(self.searchBar)
         }
 }
 
@@ -38,20 +44,25 @@ struct RecipeListItem: View {
             HStack {
                 Image(recipe.imageName)
                     .resizable()
-                    .frame(width: 72, height: 72)
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .scaledToFit()
+                    .cornerRadius(8.0)
             
                 
                 VStack {
                     HStack {
                         Text(recipe.title)
                             .font(.title3)
+                            .fontWeight(.bold)
                         Spacer()
                     }
                     
                     HStack {
                         Text(recipe.desc)
                             .padding(.top, 8)
+                            .lineLimit(3)
+                            .font(.caption)
                         Spacer()
                     }
                     
@@ -59,9 +70,6 @@ struct RecipeListItem: View {
                 }
             }
             
-            .background(Color(red: 0.0, green: 0.0, blue: 0.0, opacity: 0.0))
-            .shadow(color: Color(red: 10, green: 10, blue: 10), radius: 8)
-            .cornerRadius(8)
         }
     }
 }

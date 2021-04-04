@@ -11,92 +11,96 @@ struct MenuPlanningView: View {
     @State private var checklistVisible = false
     @State private var inAdditionVisible = false
     @State private var foodToAvoidVisible = false
+    @State private var sampleMenuVisible = false
+    
+
     
     var body: some View {
         ScrollView {
-            VStack {
-                HStack {
-                    Text("Use this checklist to plan your breakfast and afternoon tea in OSHC")
-                        .font(.title)
-                        .multilineTextAlignment(.leading)
-                        .padding()
-                    
-                    Spacer()
-                }
+            ZStack {
+                Color("bg")
+                    .edgesIgnoringSafeArea(.all)
                 
-                HStack {
-                    Text("Does you Breakfast/Afternoon tea each day include?")
-                        .foregroundColor(Color("primary"))
-                        .padding()
-                    Spacer()
-                    
-                    if (!checklistVisible) {
-                        Button(action: {
-                            checklistVisible.toggle()
-                        }, label: {
-                            Image(systemName: "arrowtriangle.down.fill")
-                                .foregroundColor(Color("secondary"))
-                                .padding()
-                        })
+                VStack {
+                    HStack {
+                        Text("Use this checklist to plan your breakfast and afternoon tea in OSHC")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.leading)
+                            .padding()
                         
-                    } else {
-                        Button(action: {
-                            checklistVisible.toggle()
-                        }, label: {
-                            Image(systemName: "arrowtriangle.up.fill")
-                                .foregroundColor(Color("secondary"))
-                                .padding()
-                        })
+                        Spacer()
                     }
-                }
-                
-                if (checklistVisible) {
-                    ForEach(checklistData) { data in
-                        MenuPlanItem(title: data.title, desc: data.desc)
-                    }
-                }
-                
-                HStack {
-                    Text("In addition...")
-                        .foregroundColor(Color("primary"))
-                        .padding()
-                    Spacer()
                     
-                    if (!inAdditionVisible) {
-                        Button(action: {
-                            inAdditionVisible.toggle()
-                        }, label: {
-                            Image(systemName: "arrowtriangle.down.fill")
-                                .foregroundColor(Color("secondary"))
-                                .padding()
-                        })
+                    HStack {
+                        Text("Breakfast/Afternoon tea checklist")
+                            .foregroundColor(Color("primary"))
+                            .padding()
+                        Spacer()
                         
-                    } else {
-                        Button(action: {
-                            inAdditionVisible.toggle()
-                        }, label: {
-                            Image(systemName: "arrowtriangle.up.fill")
-                                .foregroundColor(Color("secondary"))
-                                .padding()
-                        })
+                        if (!checklistVisible) {
+                            Button(action: {
+                                checklistVisible.toggle()
+                            }, label: {
+                                Image(systemName: "arrowtriangle.down.fill")
+                                    .foregroundColor(Color("secondary"))
+                                    .padding()
+                            })
+                            
+                        } else {
+                            Button(action: {
+                                checklistVisible.toggle()
+                            }, label: {
+                                Image(systemName: "arrowtriangle.up.fill")
+                                    .foregroundColor(Color("secondary"))
+                                    .padding()
+                            })
+                        }
                     }
-                }
-                
-                if (inAdditionVisible) {
-                    ForEach(inAdditionData) {data in
-                        MenuPlanItem(title: data.title, desc: data.desc)
+                    
+                    if (checklistVisible) {
+                        ForEach(checklistData) { data in
+                            MenuPlanItem(title: data.title, desc: data.desc)
+                        }
                     }
-                }
-                
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        .foregroundColor(Color("bg"))
+                    
+                    HStack {
+                        Text("Additional food checklist")
+                            .foregroundColor(Color("primary"))
+                            .padding()
+                        Spacer()
+                        
+                        if (!inAdditionVisible) {
+                            Button(action: {
+                                inAdditionVisible.toggle()
+                            }, label: {
+                                Image(systemName: "arrowtriangle.down.fill")
+                                    .foregroundColor(Color("secondary"))
+                                    .padding()
+                            })
+                            
+                        } else {
+                            Button(action: {
+                                inAdditionVisible.toggle()
+                            }, label: {
+                                Image(systemName: "arrowtriangle.up.fill")
+                                    .foregroundColor(Color("secondary"))
+                                    .padding()
+                            })
+                        }
+                    }
+                    
+                    if (inAdditionVisible) {
+                        ForEach(inAdditionData) {data in
+                            MenuPlanItem(title: data.title, desc: data.desc)
+                        }
+                    }
+                    
                     
                     VStack {
                         HStack {
                             Text("Food to avoid")
-                                .font(.headline)
+                                .foregroundColor(Color("primary"))
                                 .padding()
                             Spacer()
                             if (!foodToAvoidVisible) {
@@ -107,7 +111,6 @@ struct MenuPlanningView: View {
                                         .foregroundColor(Color("secondary"))
                                         .padding()
                                 })
-                                
                             } else {
                                 Button(action: {
                                     foodToAvoidVisible.toggle()
@@ -117,8 +120,6 @@ struct MenuPlanningView: View {
                                         .padding()
                                 })
                             }
-                            
-                            
                         }
                         
                         if (foodToAvoidVisible) {
@@ -131,10 +132,53 @@ struct MenuPlanningView: View {
                         }
                     
                     }
-                }.padding()
-                
+                    
+                    VStack {
+                        HStack {
+                            Text("Sample Menu Plan")
+                                .foregroundColor(Color("primary"))
+                                .padding()
+                            Spacer()
+                            if (!sampleMenuVisible) {
+                                Button(action: {
+                                    sampleMenuVisible.toggle()
+                                }, label: {
+                                    Image(systemName: "arrowtriangle.down.fill")
+                                        .foregroundColor(Color("secondary"))
+                                        .padding()
+                                })
+                            } else {
+                                Button(action: {
+                                    sampleMenuVisible.toggle()
+                                }, label: {
+                                    Image(systemName: "arrowtriangle.up.fill")
+                                        .foregroundColor(Color("secondary"))
+                                        .padding()
+                                })
+                            }
+                        }
+                        
+                        if (sampleMenuVisible) {
+                            Image("img_sample_menu_plan")
+                                .resizable()
+                                .scaledToFit()
+                        }
+                    
+                    }
+                    
+                    
+                    
+                    if(!checklistVisible && !foodToAvoidVisible && !inAdditionVisible) {
+                        Image("img_menu_planning")
+                            .resizable()
+                            .scaledToFit()
+                            .padding()
+                    }
+                    
+                }
             }
         }
+        .background(Color("bg"))
         .navigationBarTitle("Menu Checklist")
     }
 
@@ -204,7 +248,19 @@ let inAdditionData = [
 ]
 
 let foodToAvoidData = [
-    "Fairy bread, pastries",
-    "asdfasdf",
-    "adfsadwerwer"
+    "Fairy bread, pastries e.g. sweet and savoury pies",
+                    "Sweet spreads e.g. jam",
+                    "Cakes, biscuits, muffins, doughnuts",
+                    "Sweet sauces and dressings",
+                    "Muesli bars",
+                    "Desserts, ice creams",
+                    "Cream/sour cream/ butter",
+                    "Lollies, chocolate",
+                    "Processed meats for e.g salami, devon, sausages, etc.",
+                    "Burgers, pizza, chicken nuggets, fried foods",
+                    "Potato chips",
+                    "Soft drinks and cordials",
+                    "Fruit juice drinks",
+                    "Vitamin waters and flavoured mineral waters",
+                    "Energy and sports drinks"
 ]

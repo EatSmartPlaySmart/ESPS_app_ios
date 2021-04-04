@@ -10,7 +10,15 @@ import SwiftUI
 struct ContentView: View {
     @State var selection: Int? = nil
     
-    
+    init() {
+            // 1.
+        UINavigationBar.appearance().backgroundColor = UIColor.init(Color("primary"))
+           
+            // 2.
+            UINavigationBar.appearance().largeTitleTextAttributes = [
+                .foregroundColor: UIColor.black]
+                    
+        }
     
     
     var body: some View {
@@ -22,24 +30,41 @@ struct ContentView: View {
                 Color("bg")
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack {
-                    VStack {
+                VStack() {
+                    HStack {
                         HStack{
                             VStack {
                                 Image("ic_logo")
                                     .resizable()
-                                    .frame(width: 24.0, height: 24.0)
+                                    .frame(width: 24, height: 24)
+                                    .foregroundColor(Color("secondary"))
+                            
+                                
                             }
                             VStack {
-                                Text("Eat Smart")
-                                Text("Play Smart")
+                                HStack {
+                                    Text("Eat Smart")
+                                        .foregroundColor(Color("primary"))
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                    Spacer()
+                                }
+                                HStack {
+                                    Text("Play Smart")
+                                        .foregroundColor(Color("primary"))
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                    Spacer()
+                                }
                             }
                             Spacer()
                             VStack {
                                 Image("img_skip")
                                     .resizable()
-                                    .frame(width: 75.0, height: 75.0)
-                                    .aspectRatio(contentMode: .fit)
+                                    .scaledToFit()
+                                    .rotation3DEffect(
+                                        .degrees(180),
+                                        axis: (x: 0.0, y: 1.0, z: 0.0))
                                     .padding(8)
                             }
                         }
@@ -74,16 +99,19 @@ struct ContentView: View {
                             }
 
                             NavigationLink(destination: GeneralInfoView()) {
-                                Grid(image: "ic_info_1", title: "General \nInfo")
+                                Grid(image: "ic_info", title: "General \nInfo")
                             }
                         }
                     }
-                    .padding()
+                    .padding(16)
                 }
             }
             .navigationBarTitle("Home")
                 .navigationBarHidden(true)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+
+        .accentColor(.black)
     }
 }
 
@@ -97,10 +125,10 @@ struct Grid: View {
     
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 3,
+            RoundedRectangle(cornerRadius: 2,
                              style: .continuous)
                 .foregroundColor(Color.white)
-                .shadow(radius: 4)
+                .shadow(color: Color("gray"), radius: 1)
             VStack {
                 Image(self.image)
                     .resizable()
@@ -111,13 +139,13 @@ struct Grid: View {
                     
                 
                 Text(self.title)
+                    .font(.title3)
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color.black)
                     .padding(.all, 4.0)
                     
             }
         }
-        .padding(.horizontal)
     }
 }
 

@@ -12,8 +12,23 @@ struct UsefulWebsiteView: View {
         VStack {
             List(websiteList){ website in
                 Link(destination: URL(string: website.url)!) {
-                    Text(website.title)
-                        .listRowBackground(Color.purple)
+                    VStack {
+                        HStack {
+                            Text(website.title)
+                                .fontWeight(.heavy)
+                                .listRowBackground(Color.purple)
+                                
+                            Spacer()
+                        }
+                        
+                        
+                        HStack {
+                            Text(website.desc)
+                                .listRowBackground(Color.purple)
+                                .font(.caption)
+                            Spacer()
+                        }
+                    }
                 }
             }
             .navigationBarTitle("Useful Websites")
