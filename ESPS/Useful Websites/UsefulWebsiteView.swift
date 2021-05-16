@@ -15,6 +15,8 @@ struct UsefulWebsiteView: View {
                     VStack {
                         HStack {
                             Text(website.title)
+                                .foregroundColor(Color("text_on_bg"))
+                                .font(Font.custom("cabin", size: 20))
                                 .fontWeight(.heavy)
                                 .listRowBackground(Color.purple)
                                 
@@ -24,6 +26,8 @@ struct UsefulWebsiteView: View {
                         
                         HStack {
                             Text(website.desc)
+                                .foregroundColor(Color("text_gray"))
+                                .font(Font.custom("cabin", size: 14))
                                 .listRowBackground(Color.purple)
                                 .font(.caption)
                             Spacer()

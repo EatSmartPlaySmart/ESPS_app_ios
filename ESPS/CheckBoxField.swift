@@ -42,6 +42,7 @@ struct CheckboxField: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: self.size, height: self.size)
                 Text(label)
+                    .font(Font.custom("cabin", size: self.size))
                 Spacer()
             }.foregroundColor(self.color)
         }

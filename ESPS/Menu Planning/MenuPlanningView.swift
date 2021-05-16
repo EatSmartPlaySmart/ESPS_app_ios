@@ -24,7 +24,8 @@ struct MenuPlanningView: View {
                 VStack {
                     HStack {
                         Text("Use this checklist to plan your breakfast and afternoon tea in OSHC")
-                            .font(.title3)
+                            .foregroundColor(Color("text_on_bg"))
+                            .font(Font.custom("cabin", size: 16))
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.leading)
                             .padding()
@@ -35,6 +36,7 @@ struct MenuPlanningView: View {
                     HStack {
                         Text("Breakfast/Afternoon tea checklist")
                             .foregroundColor(Color("primary"))
+                            .font(Font.custom("cabin", size: 14))
                             .padding()
                         Spacer()
                         
@@ -67,6 +69,7 @@ struct MenuPlanningView: View {
                     HStack {
                         Text("Additional food checklist")
                             .foregroundColor(Color("primary"))
+                            .font(Font.custom("cabin", size: 14))
                             .padding()
                         Spacer()
                         
@@ -101,6 +104,7 @@ struct MenuPlanningView: View {
                         HStack {
                             Text("Food to avoid")
                                 .foregroundColor(Color("primary"))
+                                .font(Font.custom("cabin", size: 14))
                                 .padding()
                             Spacer()
                             if (!foodToAvoidVisible) {
@@ -126,8 +130,12 @@ struct MenuPlanningView: View {
                             ForEach(foodToAvoidData, id: \.self) { string in
                                 HStack {
                                     Text(string)
+                                        .foregroundColor(Color("text_gray"))
+                                        .font(Font.custom("cabin", size: 12))
                                     Spacer()
-                                }.padding()
+                                }
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
                             }
                         }
                     
@@ -137,6 +145,7 @@ struct MenuPlanningView: View {
                         HStack {
                             Text("Sample Menu Plan")
                                 .foregroundColor(Color("primary"))
+                                .font(Font.custom("cabin", size: 14))
                                 .padding()
                             Spacer()
                             if (!sampleMenuVisible) {
@@ -168,7 +177,7 @@ struct MenuPlanningView: View {
                     
                     
                     
-                    if(!checklistVisible && !foodToAvoidVisible && !inAdditionVisible) {
+                    if(!checklistVisible && !foodToAvoidVisible && !inAdditionVisible && !sampleMenuVisible) {
                         Image("img_menu_planning")
                             .resizable()
                             .scaledToFit()
@@ -204,7 +213,7 @@ struct MenuPlanItem: View {
             VStack {
                 
                 HStack {
-                    CheckboxField(id: UUID().uuidString, label: self.title)
+                    CheckboxField(id: UUID().uuidString, label: self.title, size: 12, color: Color("text_gray"))
                     
                     if (self.desc != "") {
                         Button(action: {
@@ -219,7 +228,7 @@ struct MenuPlanItem: View {
                         
                 }
             }
-            .padding()
+            .padding(.horizontal, 16)
         }
     }
 }

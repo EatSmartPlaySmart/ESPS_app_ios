@@ -17,7 +17,10 @@ struct ContentView: View {
             // 2.
             UINavigationBar.appearance().largeTitleTextAttributes = [
                 .foregroundColor: UIColor.black]
-                    
+        
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "cabin", size: 32)!]
+
         }
     
     
@@ -36,23 +39,21 @@ struct ContentView: View {
                             VStack {
                                 Image("ic_logo")
                                     .resizable()
-                                    .frame(width: 24, height: 24)
+                                    .frame(width: 48, height: 48)
                                     .foregroundColor(Color("secondary"))
-                            
-                                
                             }
                             VStack {
                                 HStack {
                                     Text("Eat Smart")
-                                        .foregroundColor(Color("primary"))
-                                        .font(.title3)
+                                        .foregroundColor(Color("text_on_bg"))
+                                        .font(Font.custom("cabin", size: 24))
                                         .fontWeight(.bold)
                                     Spacer()
                                 }
                                 HStack {
                                     Text("Play Smart")
-                                        .foregroundColor(Color("primary"))
-                                        .font(.title3)
+                                        .foregroundColor(Color("text_on_bg"))
+                                        .font(Font.custom("cabin", size: 24))
                                         .fontWeight(.bold)
                                     Spacer()
                                 }
@@ -107,7 +108,8 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Home")
-                .navigationBarHidden(true)
+            .navigationBarHidden(true)
+            
         }
         .navigationViewStyle(StackNavigationViewStyle())
 
@@ -139,9 +141,10 @@ struct Grid: View {
                     
                 
                 Text(self.title)
-                    .font(.title3)
+                    .foregroundColor(Color("text_gray"))
+                    .font(Font.custom("cabin", size: 14))
                     .multilineTextAlignment(.center)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color.gray)
                     .padding(.all, 4.0)
                     
             }
@@ -155,76 +158,3 @@ struct ContentView_Previews: PreviewProvider {
             
     }
 }
-
-
-//// Extension to call colors by .primary instead of Color("primary")
-//extension Color {
-//    static let primary = Color("primary")
-//    static let primary_light = Color("primary_light")
-//    static let secondary = Color("secondary")
-//    static let secondary_light = Color("secondary_light")
-//    static let bg = Color("bg")
-//    static let bg_dark = Color("bg_dark")
-//}
-
-
-//
-//
-//extension Font {
-//
-//   /// Create a font with the large title text style.
-//   public static var largeTitle: Font {
-//       return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .largeTitle).pointSize)
-//   }
-//
-//   /// Create a font with the title text style.
-//   public static var title: Font {
-//       return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .title1).pointSize)
-//   }
-//
-//   /// Create a font with the headline text style.
-//   public static var headline: Font {
-//       return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .headline).pointSize)
-//   }
-//
-//   /// Create a font with the subheadline text style.
-//   public static var subheadline: Font {
-//       return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .subheadline).pointSize)
-//   }
-//
-//   /// Create a font with the body text style.
-//   public static var body: Font {
-//          return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .body).pointSize)
-//      }
-//
-//   /// Create a font with the callout text style.
-//   public static var callout: Font {
-//          return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .callout).pointSize)
-//      }
-//
-//   /// Create a font with the footnote text style.
-//   public static var footnote: Font {
-//          return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .footnote).pointSize)
-//      }
-//
-//   /// Create a font with the caption text style.
-//   public static var caption: Font {
-//          return Font.custom("Varela-Regular", size: UIFont.preferredFont(forTextStyle: .caption1).pointSize)
-//      }
-//
-//   public static func system(size: CGFloat, weight: Font.Weight = .regular, design: Font.Design = .default) -> Font {
-//       var font = "Varela-Regular"
-//       switch weight {
-//       case .bold: font = "Varela-Regular"
-//       case .heavy: font = "Varela-Regular"
-//       case .light: font = "Varela-Regular"
-//       case .medium: font = "Varela-Regular"
-//       case .semibold: font = "Varela-Regular"
-//       case .thin: font = "Varela-Regular"
-//       case .ultraLight: font = "Varela-Regular"
-//       default: break
-//       }
-//       return Font.custom(font, size: size)
-//   }
-//}
-//
