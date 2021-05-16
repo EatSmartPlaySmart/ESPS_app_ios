@@ -26,14 +26,22 @@ struct PoliciesView: View {
                 
                 VStack {
                     HStack {
-                      Image(systemName: "person").foregroundColor(.gray)
+                      Image(systemName: "person")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.gray)
+                        .frame(width: 24, height: 24)
                       TextField("Enter your company name", text: $companyName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                       }
                     .padding([.leading, .top, .trailing])
                     
                     HStack {
-                      Image(systemName: "envelope").foregroundColor(.gray)
+                      Image(systemName: "envelope")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.gray)
+                        .frame(width: 24, height: 24)
                       TextField("Enter your email", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                       }
@@ -41,7 +49,8 @@ struct PoliciesView: View {
                     
                     HStack {
                         Text("Select the policy you would like to generate for your OSHC")
-                            .foregroundColor(Color("primary"))
+                            .foregroundColor(Color("text_on_bg"))
+                            .font(Font.custom("cabin", size: 20))
                         Spacer()
                     }.padding()
                     
@@ -60,7 +69,8 @@ struct PoliciesView: View {
                             VStack {
                                 HStack {
                                     Text("Physical activity policy")
-                                        .font(.title2)
+                                        .foregroundColor(Color("text_on_bg"))
+                                        .font(Font.custom("cabin", size: 24))
                                         .padding([.top, .leading, .trailing])
                                         
                                     Spacer()
@@ -74,7 +84,8 @@ struct PoliciesView: View {
                                 }
                                 HStack {
                                     Text(activityPolicyDesc)
-                                        .font(.caption)
+                                        .foregroundColor(Color("text_gray"))
+                                        .font(Font.custom("cabin", size: 12))
                                         .padding()
                                     Spacer()
                                 }
@@ -86,6 +97,8 @@ struct PoliciesView: View {
                                         showingPhysicalAlert.toggle()
                                     }) {
                                         Text("Preview")
+                                            .foregroundColor(Color("text_on_bg"))
+                                            .font(Font.custom("cabin", size: 22))
                                         .alert(isPresented: $showingPhysicalAlert) {
                                             Alert(title: Text("Physical Activity Policy Preview"), message: Text(getPhysicalPolicy(companyName: companyName)), dismissButton: .default(Text("Got it!")))
                                         }
@@ -96,6 +109,8 @@ struct PoliciesView: View {
                                         paPolicySelected.toggle()
                                     }) {
                                         Text("Select")
+                                            .foregroundColor(Color("text_on_bg"))
+                                            .font(Font.custom("cabin", size: 22))
                                     }
                                     .padding(.trailing, 8.0)
                                 }
@@ -121,7 +136,8 @@ struct PoliciesView: View {
                             VStack {
                                 HStack {
                                     Text("Nutrition Policy")
-                                        .font(.title2)
+                                        .foregroundColor(Color("text_on_bg"))
+                                        .font(Font.custom("cabin", size: 24))
                                         .padding([.top, .leading, .trailing])
                                     Spacer()
                                     if(self.nutritionPolicySelected == true) {
@@ -149,6 +165,8 @@ struct PoliciesView: View {
                                         showingNutritionAlert.toggle()
                                     }) {
                                         Text("Preview")
+                                            .foregroundColor(Color("text_on_bg"))
+                                            .font(Font.custom("cabin", size: 22))
                                         .alert(isPresented: $showingNutritionAlert) {
                                             Alert(title: Text("Nutrition Policy Preview"), message: Text(getNutritionPolicy(companyName: companyName)), dismissButton: .default(Text("Got it!")))
                                         }
@@ -159,6 +177,8 @@ struct PoliciesView: View {
                                         nutritionPolicySelected.toggle()
                                     }) {
                                         Text("Select")
+                                            .foregroundColor(Color("text_on_bg"))
+                                            .font(Font.custom("cabin", size: 22))
                                     }
                                     .padding(.trailing, 8)
                                     
@@ -199,6 +219,8 @@ struct PoliciesView: View {
                         HStack {
                                 Spacer()
                                 Text("Generate Policy!")
+                                    .foregroundColor(Color.white)
+                                    .font(Font.custom("cabin", size: 22))
                                     .padding(8)
                                 Spacer()
                             }

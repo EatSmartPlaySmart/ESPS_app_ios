@@ -29,7 +29,8 @@ struct ActivitiesView: View {
                         
                     HStack {
                         Text("Select an activity to learn more")
-                            .font(.body)
+                            .foregroundColor(Color("text_on_bg"))
+                            .font(Font.custom("cabin", size: 20))
                             .foregroundColor(Color("primary"))
                             .padding()
                         
@@ -44,8 +45,8 @@ struct ActivitiesView: View {
                                             RoundedRectangle(cornerRadius: 3)
                                                 .foregroundColor(Color("primary"))
                                             Text(activity.title)
-                                                .font(.body)
                                                 .foregroundColor(Color.white)
+                                                .font(Font.custom("cabin", size: 14))
                                                 .padding(8.0)
                                             
                                         }

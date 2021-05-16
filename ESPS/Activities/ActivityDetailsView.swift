@@ -21,13 +21,15 @@ struct ActivityDetailsView: View {
                     VStack {
                         HStack {
                             Text("Equipments")
-                                .font(.title)
-                                .foregroundColor(Color("primary"))
+                                .foregroundColor(Color("text_on_bg"))
+                                .font(Font.custom("cabin", size: 16))
                                 .padding()
                             Spacer()
                         }
                         HStack {
                             Text(activity.equipments.joined(separator: ""))
+                                .foregroundColor(Color("text_gray"))
+                                .font(Font.custom("cabin", size: 14))
                                 .padding(.horizontal)
                             Spacer()
                         }
@@ -39,14 +41,16 @@ struct ActivityDetailsView: View {
                         } else if (activity.type == ACTIVITY_TYPE.INDOOR_OUTDOOR && activity.activities.count == 1) {
                             HStack {
                                 Text("Instructions")
-                                    .font(.title)
-                                    .foregroundColor(Color("primary"))
+                                    .foregroundColor(Color("text_on_bg"))
+                                    .font(Font.custom("cabin", size: 16))
                                     .padding()
                                 Spacer()
                             }
                             
                             HStack {
                                 Text(activity.activities[0])
+                                    .foregroundColor(Color("text_gray"))
+                                    .font(Font.custom("cabin", size: 14))
                                     .padding(.horizontal)
                                 Spacer()
                             }
@@ -71,14 +75,16 @@ struct IndoorView: View {
         VStack {
             HStack {
                 Text("Indoor Instructions")
-                    .font(.title)
-                    .foregroundColor(Color("primary"))
+                    .foregroundColor(Color("text_on_bg"))
+                    .font(Font.custom("cabin", size: 16))
                     .padding()
                 Spacer()
             }
             
             HStack {
                 Text(instruction)
+                    .foregroundColor(Color("text_gray"))
+                    .font(Font.custom("cabin", size: 14))
                     .padding(.horizontal)
                 Spacer()
             }
@@ -93,14 +99,16 @@ struct OutdoorView: View {
         VStack {
             HStack {
                 Text("Outdoor Instructions")
-                    .font(.title)
-                    .foregroundColor(Color("primary"))
+                    .foregroundColor(Color("text_on_bg"))
+                    .font(Font.custom("cabin", size: 16))
                     .padding()
                 Spacer()
             }
             
             HStack {
                 Text(instruction)
+                    .foregroundColor(Color("text_gray"))
+                    .font(Font.custom("cabin", size: 14))
                     .padding(.horizontal)
                 Spacer()
             }

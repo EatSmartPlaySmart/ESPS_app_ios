@@ -53,13 +53,16 @@ struct RecipeListItem: View {
                 VStack {
                     HStack {
                         Text(recipe.title)
-                            .font(.title3)
+                            .foregroundColor(Color("text_on_bg"))
+                            .font(Font.custom("cabin", size: 24))
                             .fontWeight(.bold)
                         Spacer()
                     }
                     
                     HStack {
                         Text(recipe.desc)
+                            .foregroundColor(Color("text_gray"))
+                            .font(Font.custom("cabin", size: 12))
                             .padding(.top, 8)
                             .lineLimit(3)
                             .font(.caption)

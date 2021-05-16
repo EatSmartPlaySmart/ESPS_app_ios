@@ -26,14 +26,19 @@ struct RecipeDetails: View {
                         .clipped()
 
                     HStack {
-
+                        
                         Image("ic_prep")
                             .resizable()
                             .frame(width: 50, height: 50)
+                            
                         VStack {
 
                             Text(String(recipe.prepTime))
+                                .foregroundColor(Color("text_on_bg"))
+                                .font(Font.custom("cabin", size: 24))
                             Text("Mins")
+                                .foregroundColor(Color("text_on_bg"))
+                                .font(Font.custom("cabin", size: 24))
                         }
 
                         Image("ic_cook")
@@ -43,13 +48,19 @@ struct RecipeDetails: View {
 
                         VStack {
                             Text(String(recipe.cookTime))
+                                .foregroundColor(Color("text_on_bg"))
+                                .font(Font.custom("cabin", size: 24))
                             Text("Mins")
+                                .foregroundColor(Color("text_on_bg"))
+                                .font(Font.custom("cabin", size: 24))
                         }
+                        
                     }
 
                     HStack {
                         Text("Ingredients")
-                            .font(.title2)
+                            .foregroundColor(Color("text_on_bg"))
+                            .font(Font.custom("cabin", size: 20))
                             .fontWeight(.bold)
                             .padding([.top, .leading, .trailing])
                         Spacer()
@@ -60,25 +71,19 @@ struct RecipeDetails: View {
                             VStack {
                                 HStack {
                                     
-                                    CheckboxField(id: recipe.id.uuidString, label: ingredient.item)
+                                    CheckboxField(id: recipe.id.uuidString, label: ingredient.qty + " " + ingredient.item,
+                                                  size: 14, color: Color("text_gray"))
                                         .padding(.leading)
                                     Spacer()
                                 }
-                                HStack {
-                                    Text(ingredient.qty)
-                                        .font(.caption)
-                                        .padding(.leading, 32)
-                                        .padding(.bottom)
-                                    Spacer()
-                                }
-                                Divider()
                             }
                         }
 
 
                     HStack {
                         Text("Method")
-                            .font(.title2)
+                            .foregroundColor(Color("text_on_bg"))
+                            .font(Font.custom("cabin", size: 20))
                             .fontWeight(.bold)
                             .padding([.top, .leading, .trailing])
 
@@ -88,6 +93,8 @@ struct RecipeDetails: View {
                     
                     HStack {
                         Text(recipe.method)
+                            .foregroundColor(Color("text_gray"))
+                            .font(Font.custom("cabin", size: 14))
                             .padding()
                         Spacer()
                     }
@@ -100,27 +107,6 @@ struct RecipeDetails: View {
         }
     }
 }
-
-//struct Checkbox: View {
-//    @Binding var toggle: Bool
-//    var text: String
-//    var body: some View {
-//        Button(action: {
-//            self.toggle.toggle()
-//        }) {
-//            Image(self.toggle ? "checkbox-on" :  "checkbox-off")
-//                .renderingMode(.original)
-//                .resizable()
-//                .padding(0)
-//                .frame(width: 14.0, height: 14.0)
-//                .background(Color.gray)
-//            Text(text).padding(0)
-//        }
-//        .buttonStyle(PlainButtonStyle())
-//        .background(Color(red: 0, green: 0, blue: 0, opacity: 0.02))
-//        .cornerRadius(0)
-//    }
-//}
 
 struct RecipeDetails_Previews: PreviewProvider {
     static var previews: some View {

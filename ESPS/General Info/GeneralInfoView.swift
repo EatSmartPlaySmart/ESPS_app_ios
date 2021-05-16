@@ -19,19 +19,23 @@ struct GeneralInfoView: View {
                     VStack {
                         HStack {
                             Text("It is important for children to develop healthy eating and physical activity habits early in life to:")
-                                .font(.headline)
+                                .foregroundColor(Color("text_on_bg"))
+                                .font(Font.custom("cabin", size: 20))
                             Spacer()
                         }.padding()
                         
                         HStack {
                             Text("• Ensure healthy growth and development\n\n• Achieve and maintain healthy weight\n\n• Develop strong bones and muscles\n\n• Develop gross motor skills\n\n• Improve fitness, strength and flexibility\n\n• Support good mental health and reduce stress")
+                                .foregroundColor(Color("text_gray"))
+                                .font(Font.custom("cabin", size: 16))
                             Spacer()
                         }.padding()
                         
                         
                         HStack {
                             Text("Out of School Hours Care (OSHC) services are valuable in promoting healthy eating and physical activity by providing healthy food and drinks and opportunities for active play.\n\nBeing a good role model helps to promote healthy behaviours. Children will notice not just what you say but what you do.\n\nEat and drink with the children, be involved with physical activities, and look for opportunities to talk with children about health when you prepare and serve food.")
-                                .font(.subheadline)
+                                .foregroundColor(Color("text_gray"))
+                                .font(Font.custom("cabin", size: 16))
                             Spacer()
                         }.padding()
                         
