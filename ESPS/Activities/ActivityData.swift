@@ -26,7 +26,7 @@ let activityData = [
     Activity(type: ACTIVITY_TYPE.INDOOR_OUTDOOR,
              title: "Circuit Training",
              equipments: ["Skippig ropes, hoops or balls, craft materials to make cue cards"],
-             activities: ["Set up training station in a circuit around the room. Put cue sings with each station with picture cures and word cues. For example, in four corners of the room have:\n• skipping\n" +
+             activities: ["Set up training station in a circuit around the room. Put cue signs with each station with picture cues and word cues. For example, in four corners of the room have:\n• skipping\n" +
                                 "• hoping on the spot on one leg\n" +
                                 "• jumping up to touch a balloon suspended from the ceiling\n" +
                                 "• twirling a hoop around the waist\n" +

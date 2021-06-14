@@ -54,7 +54,7 @@ struct RecipeListItem: View {
                     HStack {
                         Text(recipe.title)
                             .foregroundColor(Color("text_on_bg"))
-                            .font(Font.custom("cabin", size: 24))
+                            .font(Font.custom("cabin", size: 20))
                             .fontWeight(.bold)
                         Spacer()
                     }

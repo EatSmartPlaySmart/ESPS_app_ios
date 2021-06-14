@@ -46,14 +46,14 @@ struct ContentView: View {
                                 HStack {
                                     Text("Eat Smart")
                                         .foregroundColor(Color("text_on_bg"))
-                                        .font(Font.custom("cabin", size: 24))
+                                        .font(Font.custom("cabin", size: 20))
                                         .fontWeight(.bold)
                                     Spacer()
                                 }
                                 HStack {
                                     Text("Play Smart")
                                         .foregroundColor(Color("text_on_bg"))
-                                        .font(Font.custom("cabin", size: 24))
+                                        .font(Font.custom("cabin", size: 20))
                                         .fontWeight(.bold)
                                     Spacer()
                                 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		9861C25825CA0E060056772B /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861C25725CA0E060056772B /* ViewControllerResolver.swift */; };
 		9861C25B25CA23A10056772B /* CheckBoxField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861C25A25CA23A10056772B /* CheckBoxField.swift */; };
 		9871C39E26004B3E00A63B8D /* PolicyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9871C39D26004B3E00A63B8D /* PolicyData.swift */; };
+		9877453E26770EC300A97494 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9877453D26770EC300A97494 /* FirebaseMessaging */; };
 		988B25FD264FD8E600B01D36 /* varela.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988B25FC264FD8E600B01D36 /* varela.ttf */; };
 		988B2600264FDBEA00B01D36 /* optima.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988B25FF264FDBEA00B01D36 /* optima.ttf */; };
 		988B2607264FDD8E00B01D36 /* cabin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988B2606264FDD8E00B01D36 /* cabin.ttf */; };
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9877453E26770EC300A97494 /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +203,9 @@
 			dependencies = (
 			);
 			name = ESPS;
+			packageProductDependencies = (
+				9877453D26770EC300A97494 /* FirebaseMessaging */,
+			);
 			productName = ESPS;
 			productReference = 980E130F25C3A7C8009F8489 /* ESPS.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 980E130625C3A7C8009F8489;
+			packageReferences = (
+				9877453C26770EC300A97494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 980E131025C3A7C8009F8489 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -403,8 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ESPS/Preview Content\"";
+				DEVELOPMENT_TEAM = J7K8W626CV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ESPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -414,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = earlystart.ESPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -426,6 +437,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ESPS/Preview Content\"";
+				DEVELOPMENT_TEAM = J7K8W626CV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ESPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -433,6 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = earlystart.ESPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -462,6 +475,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9877453C26770EC300A97494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9877453D26770EC300A97494 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9877453C26770EC300A97494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 980E130725C3A7C8009F8489 /* Project object */;
 }

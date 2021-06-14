@@ -7,9 +7,9 @@
 
 import Foundation
 
-let nutritionPolicyDesc = "This sample policy meets the requirements of the National Quality Standards and is aligned to the outcomes of My Time, Our Place. The following information is provided to assist OSHC services to develop their own nutrition, food handling and hygiene policy"
+let nutritionPolicyDesc = "This sample policy is provided to assist OSHC services develop their own nutrition, food handling and hygiene policy."
 
-let activityPolicyDesc = "This sample policy meets the requirements of the National Quality Standards and is aligned to the outcomes of My Time, Our Place - Framework for School Age Care in Australia. The following information is provided to assist OSHC services to develop their own physical activity policy. Tailor the information in this sample policy to your OSHC service"
+let activityPolicyDesc = "This sample policy is provided to assist OSHC services develop their own physical activity and small screen recreation policy."
 
 func getPhysicalPolicy(companyName: String)-> String {
     return "Physical Activity and Small Screen Recreation Policy\n\n" +

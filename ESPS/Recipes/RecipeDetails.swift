@@ -29,30 +29,30 @@ struct RecipeDetails: View {
                         
                         Image("ic_prep")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 30, height: 30)
                             
                         VStack {
 
                             Text(String(recipe.prepTime))
                                 .foregroundColor(Color("text_on_bg"))
-                                .font(Font.custom("cabin", size: 24))
+                                .font(Font.custom("cabin", size: 18))
                             Text("Mins")
-                                .foregroundColor(Color("text_on_bg"))
-                                .font(Font.custom("cabin", size: 24))
+                                .foregroundColor(Color("text_gray"))
+                                .font(Font.custom("cabin", size: 12))
                         }
 
                         Image("ic_cook")
                             .resizable()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 30, height: 30)
 
 
                         VStack {
                             Text(String(recipe.cookTime))
                                 .foregroundColor(Color("text_on_bg"))
-                                .font(Font.custom("cabin", size: 24))
+                                .font(Font.custom("cabin", size: 18))
                             Text("Mins")
-                                .foregroundColor(Color("text_on_bg"))
-                                .font(Font.custom("cabin", size: 24))
+                                .foregroundColor(Color("text_gray"))
+                                .font(Font.custom("cabin", size: 12))
                         }
                         
                     }
@@ -71,9 +71,13 @@ struct RecipeDetails: View {
                             VStack {
                                 HStack {
                                     
-                                    CheckboxField(id: recipe.id.uuidString, label: ingredient.qty + " " + ingredient.item,
+                                    CheckboxField(id: recipe.id.uuidString, label: ingredient.item,
                                                   size: 14, color: Color("text_gray"))
                                         .padding(.leading)
+                                    Text(ingredient.qty)
+                                            .foregroundColor(Color("text_gray"))
+                                            .font(Font.custom("cabin", size: 12))
+                                            .fontWeight(.bold)
                                     Spacer()
                                 }
                             }

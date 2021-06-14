@@ -16,7 +16,7 @@ struct Website: Identifiable {
 }
 
 let websiteList = [
-    
+    Website(title: "Eat Smart Play Smart Manual", desc: "Read more about Eat Smart Play Smart", url: "https://www.healthykids.nsw.gov.au/downloads/file/teacherschildcare/EatSmartPlaySmart_Manual_ThirdEdition-V7.pdf"),
     Website(title: "Heart Foundation", desc: "Healthy eating information", url: "http://heartfoundation.org.au/healthy-eating"),
     Website(title: "Heart Foundation", desc: "Physical Activity Information", url: "http://heartfoundation.org.au/active-living"),
     Website(title: "Heart Foundation", desc: "Jump Rope for Heart", url: "http://heartfoundation.org.au/jump-rope-for-heart-outreach-program"),
@@ -24,7 +24,7 @@ let websiteList = [
     Website(title: "Eat for Health by Australian Government", desc: "Includes the Australian Dietary Guidelines, Australian Guide to Healthy Eating and resources you can order.", url: "https://www.eatforhealth.gov.au"),
     Website(title: "Australia’s Physical Activity and Sedentary Behaviour Guidelines", desc: "Includes information on including physical activity and resources you can order.", url: "http://www.health.gov.au/internet/main/publishing.nsf/content/health-pubhlth-strategphys-act-guidelines"),
     Website(title: "A Healthy and Active Australia", desc: "This website provides a range of information and initiatives on healthy eating and regular physical activity to assist all Australians to lead healthy and active lives.", url: "http://www.healthyactive.gov.au"),
-    Website(title: "Make Healthy Normal", desc: "NSW Health website encouraging healthy eating and physical activity to encourage lifestyle changes.", url: "https://www.makehealthynormal.nsw.gov.au"),
+    Website(title: "Healthy Eating and Active Living", desc: "NSW Health website encouraging healthy eating and physical activity to encourage lifestyle changes.", url: "https://www.healthyliving.nsw.gov.au"),
     Website(title: "The Premier’s Sporting Challenge", desc: "The Premier’s Sporting Challenge is a NSW Government initiative facilitated by the NSW Department of Education that aims to engage young people in sport and physical activity and encourage them to lead healthy, active lifestyles. The Challenge includes a range of programs with one common purpose: to have more students, more active, more often!", url: "https://online.det.nsw.edu.au/psc/home.html"),
     Website(title: "NSW School Sport Unit", desc: "This Unit within the NSW Department of Education supports appropriate sport programs for all public school students. The website provides resources for teachers, information on sports safety guidelines, opportunities for students with disabilities, a calendar of events and links to regional school sports associations.", url: "http://www.sports.det.nsw.edu.au/welcome.html"),
     Website(title: "Sporting Schools Australia", desc: "Sporting Schools Australia offers grants to schools for sport based activities before, during and after school.",

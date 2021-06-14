@@ -23,7 +23,7 @@ struct MenuPlanningView: View {
                 
                 VStack {
                     HStack {
-                        Text("Use this checklist to plan your breakfast and afternoon tea in OSHC")
+                        Text("Use this checklist to help you plan meals in your service")
                             .foregroundColor(Color("text_on_bg"))
                             .font(Font.custom("cabin", size: 16))
                             .fontWeight(.semibold)
@@ -34,7 +34,7 @@ struct MenuPlanningView: View {
                     }
                     
                     HStack {
-                        Text("Breakfast/Afternoon tea checklist")
+                        Text("Make sure every breakfast/ afternoon tea includes")
                             .foregroundColor(Color("primary"))
                             .font(Font.custom("cabin", size: 14))
                             .padding()
@@ -102,7 +102,7 @@ struct MenuPlanningView: View {
                     
                     VStack {
                         HStack {
-                            Text("Food to avoid")
+                            Text("Foods to avoid")
                                 .foregroundColor(Color("primary"))
                                 .font(Font.custom("cabin", size: 14))
                                 .padding()
@@ -245,7 +245,8 @@ let checklistData = [
     
     MenuPlanData(title: "A Cereal Based Food",
                  desc: "Breakfast cereals (less than 15g/100 g of sugar or less than 25 g/100 g sugar if they contain dried fruit), breads, fruit bread, plain cracker biscuits, rice cakes and rice crackers, corn thins, muffins, fruit buns, crumps, pikelets, pasta rice, noodles and couscous\nNote:Choose wholemeal/wholegrain varieties"),
-    MenuPlanData(title: "A Fruit and Vegetable", desc: "Fresh, frozen, canned fruit (canned in unsweetened juice not syrup) or dried fruit, but not juice.\nRaw or cooked vegetables including salad vegetables, fresh, canned or frozen vegetables"),
+    MenuPlanData(title: "A Fruit", desc: "Fresh, frozen, canned fruit (canned in unsweetened juice not syrup) or dried fruit, but not juice."),
+    MenuPlanData(title: "A Vegetable", desc: "Raw or cooked vegetables including salad vegetables, fresh, canned or frozen vegetables"),
     MenuPlanData(title: "Milk, Yoghurt, Cheese", desc: "Reduced fat milks, cheese, cheese spread, yoghurt and milk alternatives (e.g sory) with added calcium (100 mg/100 ml).\nNote: Cream cheese, cream, sour cream and butter are not high sources of calcium.")
 ]
 

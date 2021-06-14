@@ -9,6 +9,7 @@ import SwiftUI
 import MessageUI
 
 struct PoliciesView: View {
+    
     @State private var companyName: String = ""
     @State private var email: String = ""
     
@@ -17,12 +18,18 @@ struct PoliciesView: View {
     
     @State private var paPolicySelected = false
     @State private var nutritionPolicySelected = false
+    @State private var shouldAlertBeShown = true
     var body: some View {
         
         ScrollView {
             ZStack {
+                
+                
                 Color("bg")
                     .edgesIgnoringSafeArea(.all)
+                    .alert(isPresented: $shouldAlertBeShown, content: {
+
+                        Alert.init(title: Text("Benefits of policies"), message: Text("The following information is provided to assist OSHC services to develop their own nutrition and physical activity policies. Tailor the information in the sample policies provided in this section to your OSHC service. Delete sections that are not relevant to your type of service and add additional points that reflect your practice. Involve educators and families in the policy development. Review the process and ensure that the final policy is on display and accessible to all educators and families."))})
                 
                 VStack {
                     HStack {
@@ -48,7 +55,7 @@ struct PoliciesView: View {
                     .padding([.leading, .bottom, .trailing])
                     
                     HStack {
-                        Text("Select the policy you would like to generate for your OSHC")
+                        Text("Select the policy you would like to generate for your service")
                             .foregroundColor(Color("text_on_bg"))
                             .font(Font.custom("cabin", size: 20))
                         Spacer()
@@ -70,7 +77,7 @@ struct PoliciesView: View {
                                 HStack {
                                     Text("Physical activity policy")
                                         .foregroundColor(Color("text_on_bg"))
-                                        .font(Font.custom("cabin", size: 24))
+                                        .font(Font.custom("cabin", size: 18))
                                         .padding([.top, .leading, .trailing])
                                         
                                     Spacer()
@@ -98,7 +105,7 @@ struct PoliciesView: View {
                                     }) {
                                         Text("Preview")
                                             .foregroundColor(Color("text_on_bg"))
-                                            .font(Font.custom("cabin", size: 22))
+                                            .font(Font.custom("cabin", size: 16))
                                         .alert(isPresented: $showingPhysicalAlert) {
                                             Alert(title: Text("Physical Activity Policy Preview"), message: Text(getPhysicalPolicy(companyName: companyName)), dismissButton: .default(Text("Got it!")))
                                         }
@@ -110,7 +117,7 @@ struct PoliciesView: View {
                                     }) {
                                         Text("Select")
                                             .foregroundColor(Color("text_on_bg"))
-                                            .font(Font.custom("cabin", size: 22))
+                                            .font(Font.custom("cabin", size: 16))
                                     }
                                     .padding(.trailing, 8.0)
                                 }
@@ -137,7 +144,7 @@ struct PoliciesView: View {
                                 HStack {
                                     Text("Nutrition Policy")
                                         .foregroundColor(Color("text_on_bg"))
-                                        .font(Font.custom("cabin", size: 24))
+                                        .font(Font.custom("cabin", size: 18))
                                         .padding([.top, .leading, .trailing])
                                     Spacer()
                                     if(self.nutritionPolicySelected == true) {
@@ -152,7 +159,8 @@ struct PoliciesView: View {
                                 
                                 HStack {
                                     Text(nutritionPolicyDesc)
-                                        .font(.caption)
+                                        .foregroundColor(Color("text_gray"))
+                                        .font(Font.custom("cabin", size: 12))
                                         .padding()
                                     Spacer()
                                 }
@@ -166,7 +174,7 @@ struct PoliciesView: View {
                                     }) {
                                         Text("Preview")
                                             .foregroundColor(Color("text_on_bg"))
-                                            .font(Font.custom("cabin", size: 22))
+                                            .font(Font.custom("cabin", size: 16))
                                         .alert(isPresented: $showingNutritionAlert) {
                                             Alert(title: Text("Nutrition Policy Preview"), message: Text(getNutritionPolicy(companyName: companyName)), dismissButton: .default(Text("Got it!")))
                                         }
@@ -178,7 +186,7 @@ struct PoliciesView: View {
                                     }) {
                                         Text("Select")
                                             .foregroundColor(Color("text_on_bg"))
-                                            .font(Font.custom("cabin", size: 22))
+                                            .font(Font.custom("cabin", size: 16))
                                     }
                                     .padding(.trailing, 8)
                                     

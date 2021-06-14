@@ -16,7 +16,7 @@ struct UsefulWebsiteView: View {
                         HStack {
                             Text(website.title)
                                 .foregroundColor(Color("text_on_bg"))
-                                .font(Font.custom("cabin", size: 20))
+                                .font(Font.custom("cabin", size: 16))
                                 .fontWeight(.heavy)
                                 .listRowBackground(Color.purple)
                                 
