@@ -12,9 +12,9 @@ struct ActivitiesView: View {
     private var columns: [GridItem] = [
             GridItem(.flexible(), spacing: 16)
         ]
+    @State private var bottomSheetPosition: BookBottomSheetPosition = .bottom
     
     var body: some View {
-        
         
         GeometryReader { metrics in
             ZStack {
@@ -57,6 +57,36 @@ struct ActivitiesView: View {
                     .padding()
                 }
             }
+        }
+        .bottomSheet(bottomSheetPosition: self.$bottomSheetPosition, options: [.allowContentDrag, .showCloseButton(), .swipeToDismiss, .tapToDissmiss], headerContent: {
+                VStack(alignment: .leading) {
+                    Text("Submit an activity!")
+                        .foregroundColor(Color("primary"))
+                        .font(.title).bold()
+                    Divider()
+                        .padding(.trailing, -30)
+                }
+            }) {
+                VStack {
+                    HStack {
+                        Text("Please submit an activity to be seen in the app!")
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding()
+                        
+                    }
+                    HStack {
+                        Spacer()
+                        Link(destination: URL(string: "https://uow.au1.qualtrics.com/jfe/form/SV_41wqxDxI9e9g9dI")!) {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 16)
+                                    .foregroundColor(Color("primary"))
+                                    .frame(width: 72, height: 48)
+                                Text("Submit")
+                                    .foregroundColor(Color.white)
+                            }.padding(16)
+                        }
+                    }
+                }
         }
         .navigationTitle("Activities")
         

@@ -32,6 +32,8 @@
 		9897AAE125CB807300BC82A4 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897AAE025CB807300BC82A4 /* ActivitiesView.swift */; };
 		98BB2FCA25F8483A0021FDEC /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BB2FC925F8483A0021FDEC /* ActivityData.swift */; };
 		98CFC64025DB7AAE0081F0D0 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CFC63F25DB7AAE0081F0D0 /* EmailHelper.swift */; };
+		98EC8C5726906DAB009A020E /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC8C5626906DAB009A020E /* BottomSheet.swift */; };
+		98EC8C5B2690B1D1009A020E /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 98EC8C5A2690B1D1009A020E /* BottomSheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,7 @@
 		9897AAE025CB807300BC82A4 /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		98BB2FC925F8483A0021FDEC /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		98CFC63F25DB7AAE0081F0D0 /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		98EC8C5626906DAB009A020E /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9877453E26770EC300A97494 /* FirebaseMessaging in Frameworks */,
+				98EC8C5B2690B1D1009A020E /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,7 @@
 				9861C25425CA08CF0056772B /* SearchBar.swift */,
 				9861C25725CA0E060056772B /* ViewControllerResolver.swift */,
 				9861C25A25CA23A10056772B /* CheckBoxField.swift */,
+				98EC8C5626906DAB009A020E /* BottomSheet.swift */,
 			);
 			path = ESPS;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			name = ESPS;
 			packageProductDependencies = (
 				9877453D26770EC300A97494 /* FirebaseMessaging */,
+				98EC8C5A2690B1D1009A020E /* BottomSheet */,
 			);
 			productName = ESPS;
 			productReference = 980E130F25C3A7C8009F8489 /* ESPS.app */;
@@ -235,6 +241,7 @@
 			mainGroup = 980E130625C3A7C8009F8489;
 			packageReferences = (
 				9877453C26770EC300A97494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				98EC8C592690B1D1009A020E /* XCRemoteSwiftPackageReference "BottomSheet" */,
 			);
 			productRefGroup = 980E131025C3A7C8009F8489 /* Products */;
 			projectDirPath = "";
@@ -279,6 +286,7 @@
 				9897AADD25CB803800BC82A4 /* MenuPlanningView.swift in Sources */,
 				9861C25B25CA23A10056772B /* CheckBoxField.swift in Sources */,
 				9815A7F325C8AFD200A66C58 /* RecipeDetails.swift in Sources */,
+				98EC8C5726906DAB009A020E /* BottomSheet.swift in Sources */,
 				9861C25825CA0E060056772B /* ViewControllerResolver.swift in Sources */,
 				98CFC64025DB7AAE0081F0D0 /* EmailHelper.swift in Sources */,
 				9861C25525CA08CF0056772B /* SearchBar.swift in Sources */,
@@ -485,6 +493,14 @@
 				minimumVersion = 8.1.1;
 			};
 		};
+		98EC8C592690B1D1009A020E /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LucasMucGH/BottomSheet";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -492,6 +508,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9877453C26770EC300A97494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		98EC8C5A2690B1D1009A020E /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98EC8C592690B1D1009A020E /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
