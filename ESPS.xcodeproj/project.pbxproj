@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		606330C1BEA15D644E41D8FA /* Pods_ESPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF55515C08F06D90B9901C6 /* Pods_ESPS.framework */; };
 		980E131325C3A7C8009F8489 /* ESPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E131225C3A7C8009F8489 /* ESPSApp.swift */; };
 		980E131525C3A7C8009F8489 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E131425C3A7C8009F8489 /* ContentView.swift */; };
 		980E131725C3A7CB009F8489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980E131625C3A7CB009F8489 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		9861C25B25CA23A10056772B /* CheckBoxField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861C25A25CA23A10056772B /* CheckBoxField.swift */; };
 		9871C39E26004B3E00A63B8D /* PolicyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9871C39D26004B3E00A63B8D /* PolicyData.swift */; };
 		9877453E26770EC300A97494 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9877453D26770EC300A97494 /* FirebaseMessaging */; };
+		98774541267719C700A97494 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98774540267719C700A97494 /* GoogleService-Info.plist */; };
 		988B25FD264FD8E600B01D36 /* varela.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988B25FC264FD8E600B01D36 /* varela.ttf */; };
 		988B2600264FDBEA00B01D36 /* optima.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988B25FF264FDBEA00B01D36 /* optima.ttf */; };
 		988B2607264FDD8E00B01D36 /* cabin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988B2606264FDD8E00B01D36 /* cabin.ttf */; };
@@ -37,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10E9CCA0E0D48166FAEC532A /* Pods-ESPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESPS.release.xcconfig"; path = "Target Support Files/Pods-ESPS/Pods-ESPS.release.xcconfig"; sourceTree = "<group>"; };
 		980E130F25C3A7C8009F8489 /* ESPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		980E131225C3A7C8009F8489 /* ESPSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPSApp.swift; sourceTree = "<group>"; };
 		980E131425C3A7C8009F8489 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		9861C25725CA0E060056772B /* ViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
 		9861C25A25CA23A10056772B /* CheckBoxField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxField.swift; sourceTree = "<group>"; };
 		9871C39D26004B3E00A63B8D /* PolicyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyData.swift; sourceTree = "<group>"; };
+		98774540267719C700A97494 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		988B25FC264FD8E600B01D36 /* varela.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = varela.ttf; sourceTree = "<group>"; };
 		988B25FF264FDBEA00B01D36 /* optima.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = optima.ttf; sourceTree = "<group>"; };
 		988B2606264FDD8E00B01D36 /* cabin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cabin.ttf; sourceTree = "<group>"; };
@@ -63,7 +67,13 @@
 		9897AAE025CB807300BC82A4 /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		98BB2FC925F8483A0021FDEC /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		98CFC63F25DB7AAE0081F0D0 /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+
 		98EC8C5626906DAB009A020E /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+
+		98F3833E26775AFD00EE23CC /* ESPS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ESPS.entitlements; sourceTree = "<group>"; };
+		9AF55515C08F06D90B9901C6 /* Pods_ESPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24131CD82CF0438D425108A /* Pods-ESPS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESPS.debug.xcconfig"; path = "Target Support Files/Pods-ESPS/Pods-ESPS.debug.xcconfig"; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,18 +82,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				9877453E26770EC300A97494 /* FirebaseMessaging in Frameworks */,
+
 				98EC8C5B2690B1D1009A020E /* BottomSheet in Frameworks */,
+
+				606330C1BEA15D644E41D8FA /* Pods_ESPS.framework in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B3BFD4F947D0ABB26EA168D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AF55515C08F06D90B9901C6 /* Pods_ESPS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		980E130625C3A7C8009F8489 = {
 			isa = PBXGroup;
 			children = (
 				980E131125C3A7C8009F8489 /* ESPS */,
 				980E131025C3A7C8009F8489 /* Products */,
+				DAA0795A9795713F239368F3 /* Pods */,
+				8B3BFD4F947D0ABB26EA168D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +122,7 @@
 		980E131125C3A7C8009F8489 /* ESPS */ = {
 			isa = PBXGroup;
 			children = (
+				98F3833E26775AFD00EE23CC /* ESPS.entitlements */,
 				988B25FB264FD89A00B01D36 /* Font */,
 				9897AADF25CB806200BC82A4 /* Activities */,
 				9897AACD25CB7A1400BC82A4 /* General Info */,
@@ -114,7 +139,11 @@
 				9861C25425CA08CF0056772B /* SearchBar.swift */,
 				9861C25725CA0E060056772B /* ViewControllerResolver.swift */,
 				9861C25A25CA23A10056772B /* CheckBoxField.swift */,
+
 				98EC8C5626906DAB009A020E /* BottomSheet.swift */,
+
+				98774540267719C700A97494 /* GoogleService-Info.plist */,
+
 			);
 			path = ESPS;
 			sourceTree = "<group>";
@@ -192,6 +221,15 @@
 			path = Activities;
 			sourceTree = "<group>";
 		};
+		DAA0795A9795713F239368F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E24131CD82CF0438D425108A /* Pods-ESPS.debug.xcconfig */,
+				10E9CCA0E0D48166FAEC532A /* Pods-ESPS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 980E131E25C3A7CB009F8489 /* Build configuration list for PBXNativeTarget "ESPS" */;
 			buildPhases = (
+				A31976163C4BA1846552A974 /* [CP] Check Pods Manifest.lock */,
 				980E130B25C3A7C8009F8489 /* Sources */,
 				980E130C25C3A7C8009F8489 /* Frameworks */,
 				980E130D25C3A7C8009F8489 /* Resources */,
+				50D2ED1BE9583E99D2D6BC39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,10 +303,53 @@
 				988B25FD264FD8E600B01D36 /* varela.ttf in Resources */,
 				988B2600264FDBEA00B01D36 /* optima.ttf in Resources */,
 				988B2607264FDD8E00B01D36 /* cabin.ttf in Resources */,
+				98774541267719C700A97494 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50D2ED1BE9583E99D2D6BC39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ESPS/Pods-ESPS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ESPS/Pods-ESPS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ESPS/Pods-ESPS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A31976163C4BA1846552A974 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ESPS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		980E130B25C3A7C8009F8489 /* Sources */ = {
@@ -416,9 +499,11 @@
 		};
 		980E131F25C3A7CB009F8489 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24131CD82CF0438D425108A /* Pods-ESPS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ESPS/ESPS.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ESPS/Preview Content\"";
@@ -440,9 +525,11 @@
 		};
 		980E132025C3A7CB009F8489 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10E9CCA0E0D48166FAEC532A /* Pods-ESPS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ESPS/ESPS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ESPS/Preview Content\"";
 				DEVELOPMENT_TEAM = J7K8W626CV;
